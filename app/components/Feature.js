@@ -9,3 +9,4 @@ export default function Feature({ Icon, title, description }) {
     </div>
   );
 }
+ 
