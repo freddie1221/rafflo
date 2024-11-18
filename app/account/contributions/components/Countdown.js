@@ -30,5 +30,5 @@ export default function Countdown() {
     return `${hrs}:${mins}:${secs}`;
   };
 
-  return <div>{formatTime(timeLeft)}</div>;
+  return formatTime(timeLeft)
 }

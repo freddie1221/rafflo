@@ -19,7 +19,6 @@ export default function Contributions() {
         frequency="Weekly"
       />
       </div>
-      <h1 className="heading-primary">Next Prize Draw</h1>
       <PrizeDraws />
     </div>
   )
@@ -43,7 +42,10 @@ function Contribution({ title, amount, frequency }) {
 function PrizeDraws() {
   return (
     <div>
-      <Countdown />
+      <h1 className="heading-primary">Next Prize Draw</h1>
+      <h2 className="heading-secondary">
+        <Countdown />
+      </h2>
       <Spinner segments={["1st Prize", "2nd Prize", "3rd Prize", "4th Prize", "5th Prize", "6th Prize"]} />
     </div>
   )
