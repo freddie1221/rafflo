@@ -1,7 +1,11 @@
 
-export default function formInput({type, placeholder}) {
+export default function formInput({type, placeholder, required, label}) {
   return (
-    <input type={type} placeholder={placeholder} required
+    <input 
+    label={label}  
+    type={type} 
+      placeholder={placeholder} 
+      required={required}
       className="mt-2 
       w-full 
       rounded-lg 

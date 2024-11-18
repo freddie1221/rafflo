@@ -2,6 +2,7 @@
 
 import { HiHeart } from "react-icons/hi";
 import { useState } from "react";
+import FormInput from "@/app/components/Input";
 
 export default function BermudaNationalTrust() {
   const [amount, setAmount] = useState(0);
@@ -28,10 +29,10 @@ export default function BermudaNationalTrust() {
             <button
               key={option}
               onClick={() => setAmount(option)}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-3 min-w-24 text-white font-semibold rounded ${
                 amount === option
-                  ? "bg-purple-600 text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white transition-colors duration-200"
+                  ? "bg-purple-600 text-white border border-white"
+                  : "bg-white  hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
               } focus:outline-none transition-colors duration-200`}
             >
               ${option}
@@ -48,10 +49,10 @@ export default function BermudaNationalTrust() {
             <button
               key={option}
               onClick={() => setFrequency(option)}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-3 min-w-24 text-white font-semibold rounded ${
                 frequency === option
-                  ? "bg-purple-600 text-white"
-                  : "bg-gray-200 text-gray-700"
+                  ? "bg-purple-600 text-white border border-white"
+                  : "bg-white  hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
               } focus:outline-none capitalize transition-colors duration-200`}
             >
               {option}
@@ -65,47 +66,33 @@ export default function BermudaNationalTrust() {
         <div className="mt-8 bg-white/[0.05] p-6 rounded-lg shadow-lg backdrop-blur-md">
           <h3 className="text-xl font-semibold mb-4 text-white">Payment Details</h3>
           <form className="space-y-4">
-            <div>
-              <label className="block text-gray-300">Cardholder Name</label>
-              <input
-                type="text"
-                className="w-full px-3 py-2 border border-gray-500 rounded bg-transparent text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
-                placeholder="John Doe"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-300">Card Number</label>
-              <input
-                type="text"
-                className="w-full px-3 py-2 border border-gray-500 rounded bg-transparent text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
-                placeholder="1234 5678 9012 3456"
-                required
-              />
-            </div>
-            <div className="flex space-x-4">
-              <div>
-                <label className="block text-gray-300">Expiry</label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 border border-gray-500 rounded bg-transparent text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
-                  placeholder="MM/YY"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-gray-300">CVC</label>
-                <input
-                  type="number"
-                  className="w-full px-3 py-2 border border-gray-500 rounded bg-transparent text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-600"
-                  placeholder="123"
-                  required
-                />
-              </div>
-            </div>
+            <FormInput
+              type="text"
+              placeholder="Cardholder Name"
+              required
+              label="Cardholder Name"
+            />
+            <FormInput
+              type="number"
+              placeholder="Card Number"
+              required
+              label="Card Number"
+            />
+            <FormInput
+              type="text"
+              placeholder="MM/YY"
+              required
+              label="Expiry"
+            />
+            <FormInput
+              type="number"
+              placeholder="CVC"
+              required
+              label="CVC"
+            />
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition-colors duration-200"
+              className="button-primary"
             >
               Begin Playing
             </button>
@@ -128,3 +115,4 @@ function Cause({ Icon, title, slug, description }) {
     </div>
   );
 }
+

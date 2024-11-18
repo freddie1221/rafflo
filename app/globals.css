@@ -27,10 +27,32 @@ body {
 }
 
 @layer components {
+  .heading-primary {
+    @apply text-2xl font-semibold text-white text-center my-4
+  }
   .heading-secondary {
     @apply text-2xl font-semibold text-white text-center
     }
+  .button-primary {
+    @apply text-center mt-2 w-full rounded-lg bg-purple-600 p-4 font-semibold text-white
   }
+  .form-input {
+    @apply mt-2 
+    w-full 
+    rounded-lg 
+    border-gray-400 
+    bg-gray-200
+    bg-opacity-20 
+    shadow-sm
+    font-semibold
+    placeholder-white
+    placeholder-opacity-50
+    text-white
+    text-lg 
+    p-4
+    focus:ring-2 focus:ring-purple-600
+  }
+}
 
 .container {
   max-width: 1200px;
