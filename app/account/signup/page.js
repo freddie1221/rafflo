@@ -8,7 +8,7 @@ export default function Signup() {
       {formInput({type: "text", placeholder: "Last Name"})}
       {formInput({type: "email", placeholder: "Email"})}
       {formInput({type: "password", placeholder: "Password"})}
-      <Link href="/account/causes/bermuda-national-trust" className="text-center mt-2 w-full rounded-lg bg-purple-600 p-4 font-semibold text-white">Create Account</Link>
+      <Link href="/account/causes/" className="text-center mt-2 w-full rounded-lg bg-purple-600 p-4 font-semibold text-white">Create Account</Link>
     </div>
   );
 }
