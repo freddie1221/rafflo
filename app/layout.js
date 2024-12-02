@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,9 +25,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} 
           antialiased min-h-screen text-white 
           bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 p-8
-          flex flex-col items-center 
+          flex flex-col items-center max-w-2xl mx-auto
           `}
       >
+        <Header />
         {children}
       </body>
     </html>

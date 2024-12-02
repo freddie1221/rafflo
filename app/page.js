@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-extrabold text-white mb-6">Rafflo</h1>
       <p className="text-xl text-white mb-10 text-center max-w-lg">
         A simple way for donors to make weekly donations to their favorite charities through a fun lottery system, empowering charities to recruit more recurring donations.
       </p>

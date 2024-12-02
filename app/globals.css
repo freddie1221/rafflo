@@ -31,7 +31,7 @@ body {
     @apply text-2xl font-semibold text-white text-center my-4
   }
   .heading-secondary {
-    @apply text-2xl font-semibold text-white text-center
+    @apply text-2xl font-semibold text-white text-center mb-4
     }
   .button-primary {
     @apply text-center mt-2 w-full rounded-lg bg-purple-600 p-4 font-semibold text-white

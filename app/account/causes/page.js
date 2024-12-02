@@ -6,8 +6,8 @@ import { HiHeart, HiLightBulb, HiAcademicCap, HiFire } from "react-icons/hi";
 export default function Causes() {
   return (
     <div className="container">
-      <h1 className="text-5xl font-extrabold text-white mb-6">Causes</h1>
-      <h2 className="heading-secondary text-2xl font-semibold text-white mb-6">Select a cause to begin playing</h2>
+      <h1 className="text-3xl font-extrabold text-white mb-6">Causes</h1>
+      <h2 className="heading-secondary text-2xl font-semibold text-white mb-6">Select a cause to stake your tickets</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <Cause
             Icon={HiHeart}
@@ -38,7 +38,8 @@ export default function Causes() {
 
 function Cause({ Icon, title, slug, description }) {
   return (
-    <Link href={`/account/causes/${slug}`} className="flex flex-col items-center text-center bg-white/[0.1] p-6 rounded-lg shadow-lg backdrop-blur-md transform transition-transform duration-300 hover:scale-105">
+    <Link href={`/account/causes/${slug}`} 
+      className="flex flex-col items-center text-center bg-white/[0.1] p-6 rounded-lg shadow-lg backdrop-blur-md transform transition-transform duration-300 hover:scale-105">
       <Icon className="text-6xl text-white mb-4" aria-hidden="true" />
       <h2 className="text-2xl font-semibold text-white mb-2">{title}</h2>
       <p className="text-white">{description}</p>

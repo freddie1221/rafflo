@@ -3,8 +3,11 @@
 import { HiHeart } from "react-icons/hi";
 import { useState } from "react";
 import FormInput from "@/app/components/Input";
+import { useRouter } from "next/navigation";
+
 
 export default function BermudaNationalTrust() {
+  const router = useRouter();
   const [amount, setAmount] = useState(0);
   const [frequency, setFrequency] = useState("");
 
@@ -29,10 +32,10 @@ export default function BermudaNationalTrust() {
             <button
               key={option}
               onClick={() => setAmount(option)}
-              className={`px-4 py-3 min-w-24 text-white font-semibold rounded ${
+              className={`px-6 py-3 min-w-24 text-white font-semibold rounded ${
                 amount === option
                   ? "bg-purple-600 text-white border border-white"
-                  : "bg-white  hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
+                  : "bg-white border hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
               } focus:outline-none transition-colors duration-200`}
             >
               ${option}
@@ -49,10 +52,10 @@ export default function BermudaNationalTrust() {
             <button
               key={option}
               onClick={() => setFrequency(option)}
-              className={`px-4 py-3 min-w-24 text-white font-semibold rounded ${
+              className={`px-6 py-3 min-w-24 text-white font-semibold rounded ${
                 frequency === option
                   ? "bg-purple-600 text-white border border-white"
-                  : "bg-white  hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
+                  : "bg-white border hover:bg-purple-600 hover:text-white transition-colors duration-200 bg-opacity-30"
               } focus:outline-none capitalize transition-colors duration-200`}
             >
               {option}
@@ -93,8 +96,11 @@ export default function BermudaNationalTrust() {
             <button
               type="submit"
               className="button-primary"
+              onClick={() => {
+                router.push(`/account/stakes/`);
+              }}
             >
-              Begin Playing
+              Enter Raffle
             </button>
           </form>
         </div>
