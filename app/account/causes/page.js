@@ -7,7 +7,7 @@ export default function Causes() {
   return (
     <div className="container">
       <h1 className="text-3xl font-extrabold text-white mb-6">Causes</h1>
-      <h2 className="heading-secondary text-2xl font-semibold text-white mb-6">Select a cause to stake your tickets</h2>
+      <h2 className="heading-secondary text-2xl font-semibold text-white mb-6">Select a cause to purchase tickets</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <Cause
             Icon={HiHeart}

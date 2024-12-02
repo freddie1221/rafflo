@@ -68,7 +68,16 @@ export default function BermudaNationalTrust() {
       {amount > 0 && frequency && (
         <div className="mt-8 bg-white/[0.05] p-6 rounded-lg shadow-lg backdrop-blur-md">
           <h3 className="text-xl font-semibold mb-4 text-white">Payment Details</h3>
-          <form className="space-y-4">
+          <form
+            className="space-y-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+              // TODO: Add form validation and processing logic here
+
+              // After successful processing, navigate to the desired route
+              router.push(`/account/stakes/`);
+            }}
+          >
             <FormInput
               type="text"
               placeholder="Cardholder Name"
@@ -96,9 +105,6 @@ export default function BermudaNationalTrust() {
             <button
               type="submit"
               className="button-primary"
-              onClick={() => {
-                router.push(`/account/stakes/`);
-              }}
             >
               Enter Raffle
             </button>
